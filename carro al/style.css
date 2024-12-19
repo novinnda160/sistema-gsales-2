@@ -1,0 +1,197 @@
+/* Reset de margens e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff7b;
+}
+
+/* Cabeçalho fixo */
+.menu-fixo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #ffffff;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.menu-fixo .logo img {
+  height: 50px;
+}
+
+.menu-fixo .menu-content ul {
+  display: flex;
+  list-style: none;
+}
+
+.menu-fixo .menu-content ul li {
+  margin: 0 10px;
+}
+
+.menu-fixo .menu-content ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-fixo .menu-toggle {
+  display: none;
+  color: #0d0d0d;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsividade do menu */
+@media (max-width: 768px) {
+  .menu-fixo .menu-content {
+    display: none;
+  }
+
+  .menu-fixo .menu-toggle {
+    display: block;
+  }
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background: url('img/Imagem\ do\ WhatsApp\ de\ 2024-11-05\ à\(s\)\ 11.15.44_a5ac06b4.jpg') no-repeat center center/cover;
+  text-align: center;
+  color: #090909;
+}
+
+.banner-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 18px;
+}
+
+/* Seção de pacotes */
+.pacotes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 20px;
+}
+
+.pacotes h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo dos cards */
+.card {
+  flex: 1 1 calc(25% - 32px);
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.card .preco {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e67e22;
+}
+
+.card button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 16px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Rodapé */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+footer .footer-info h4,
+footer .footer-links h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
